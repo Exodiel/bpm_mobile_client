@@ -63,7 +63,7 @@ class WhereAreYouGoingButton extends ConsumerWidget {
                   ],
                 ),
                 child: const Text(
-                  "Where are you going?",
+                  "¿Hacia donde dirigimos tu pedido?",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.black54,

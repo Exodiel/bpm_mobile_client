@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_meedu/state.dart';
 import 'package:google_maps/app/ui/pages/splash/splash_controller.dart';
+import 'package:google_maps/app/ui/global_controllers/session_controller.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:flutter_meedu/page.dart';
 import 'package:flutter_meedu/meedu.dart';
 import 'package:flutter_meedu/router.dart' as router;
 
 final splashProvider = SimpleProvider(
-  (_) => SplashController(_.arguments as Permission),
+  (_) => SplashController(_.arguments as Permission, sessionProvider.read),
 );
 
 class SplashPage extends PageWithArgumentsWidget {

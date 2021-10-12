@@ -32,7 +32,7 @@ class _RequestPermissionPageState extends State<RequestPermissionPage> with Widg
               context: context,
               builder: (_) => AlertDialog(
                 title: const Text("INFO"),
-                content: const Text("saas sasaas"),
+                content: const Text("Es necesario conceder los permisos para una mejor experiencia"),
                 actions: [
                   TextButton(
                     onPressed: () async {
@@ -77,7 +77,7 @@ class _RequestPermissionPageState extends State<RequestPermissionPage> with Widg
   }
 
   void _goToHome() {
-    Navigator.pushReplacementNamed(context, Routes.HOME);
+    Navigator.pushReplacementNamed(context, Routes.START);
   }
 
   @override

@@ -35,6 +35,13 @@ dependencies:
     git:
       url: https://github.com/heremaps/flexible-polyline.git
       path: dart
+  flutter_secure_storage: ^4.2.1
+  flutter_svg: ^0.22.0
+  badges: ^2.0.1
+  font_awesome_flutter: ^9.1.0
+  socket_io_client: ^2.0.0-beta.4-nullsafety.0
+  awesome_notifications: ^0.0.6+10
+  timeago: ^3.1.0
 
 dev_dependencies:
   flutter_test:
@@ -64,6 +71,7 @@ flutter:
   assets:
     - assets/homer.png
     - assets/car-pin.png
+    - assets/images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

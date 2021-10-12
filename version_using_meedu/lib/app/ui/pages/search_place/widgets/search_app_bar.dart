@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_meedu/state.dart';
 import '../search_place_page.dart' show OriginAndDestinationResponse, searchProvider;
 import 'package:flutter_meedu/router.dart' as router;
+import 'package:google_maps/app/ui/global_controllers/session_controller.dart' show sessionProvider;
 
 class SearchAppBar extends StatelessWidget with PreferredSizeWidget {
   const SearchAppBar({
@@ -25,9 +26,11 @@ class SearchAppBar extends StatelessWidget with PreferredSizeWidget {
             final destination = controller.destination;
             final bool enabled = origin != null && destination != null;
             return CupertinoButton(
-              child: const Text("SAVE"),
+              child: const Text("GUARDAR"),
               onPressed: enabled
                   ? () {
+                      
+                      sessionProvider.read.addRoutes(origin, destination);
                       router.pop(
                         OriginAndDestinationResponse(origin, destination),
                       );
